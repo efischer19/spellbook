@@ -1,0 +1,71 @@
+html {
+	background-image: -webkit-linear-gradient(#FFDBB8, #B29981);
+	background-size: cover;
+	height: 100%;
+}
+
+body {
+	font-family: impact, fantasy, arial, sans-serif;
+	color: #2B1600;
+	font-size: 32px;
+	max-width: 1080px;
+	height: 100%;
+    margin: 0;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+	padding-left: 5px;
+}
+
+h1 {
+	font-size: 200%;
+	font-weight: bold;
+}
+
+h3 {
+	font-size: 130%;
+	font-weight: normal;
+	font-style: oblique;
+}
+
+h1+h3 {
+	float: right;
+	padding-top: 2%;
+}
+
+table {
+	width: 1000px;
+	position: relative;
+	left: 40px;
+	border: 2px solid #2B1600;
+	empty-cells: show;
+}
+
+th, td {
+	padding: 5px;
+}
+
+p {
+	text-indent: 40px;
+}
+
+.label {
+	font-weight: bold;
+}
+
+.even {
+	background-color: #FFDBB8;
+}
+
+.odd {
+	background-color: #B29981;
+}
+
+#overview>* {
+	display: inline-block;
+	margin-bottom: 0px;
+	margin-top: 30px;
+}
+
+#title-header {
+	text-align: center;
+}

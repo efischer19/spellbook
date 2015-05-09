@@ -1,0 +1,14 @@
+{
+  "name": "spellbook",
+  "version": "0.0.1",
+  "description": "My first express app, a D&D 5e spellbook. I do not own any rights to the actual sells, so I will not be including them in any way.",
+  "main": "src/app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Eric Fischer",
+  "license": "GPLv2",
+  "dependencies": {
+    "express": "~4.12.3"
+  }
+}
