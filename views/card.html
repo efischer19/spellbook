@@ -1,10 +1,12 @@
 <!DOCTYPE html>
-<html>
+<html ng-app="spellbook-card">
 	<head>
 		<title>Spell Details</title>
 		<link rel="stylesheet" type="text/css" href="stylesheets/card.css">
+		<script src="angular.min.js"></script>
+		<script src="card_ctrl.js"></script>
 	</head>
-	<body>
+	<body ng-controller="CardCtrl as cardCtrl">
 		<header>
 			<div id="title-header">
 				Droor Spellbook
@@ -16,8 +18,8 @@
 		</header>
 		<article>
 			<hgroup id="overview">
-				<h1>Shield Of Cats</h1>
-				<h3>7st-level Conjuration</h3>
+				<h1>{{cardCtrl.card.title}}</h1>
+				<h3>{{cardCtrl.card.displayLevel}}</h3>
 			</hgroup>
 			</br>
 			<table id="technical-details">

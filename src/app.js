@@ -3,6 +3,8 @@ var app = express();
 
 //static locations
 app.use(express.static('views'));
+app.use(express.static('src'));
+app.use(express.static('lib'));
 
 //address and port selection
 var setupDetails = require('./server_init.js');
