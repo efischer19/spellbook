@@ -1,7 +1,7 @@
 html {
 	background-image: -webkit-linear-gradient(#FFDBB8, #B29981);
 	background-size: cover;
-	height: 100%;
+	min-height: 100%;
 }
 
 body {
@@ -33,11 +33,23 @@ h1+h3 {
 }
 
 table {
-	width: 1000px;
+	width: 960px;
 	position: relative;
-	left: 40px;
+	left: 60px;
 	border: 2px solid #2B1600;
 	empty-cells: show;
+}
+
+tr:nth-child(odd){
+	background-color: #B29981;
+}
+
+tr:nth-child(even){
+	background-color: #FFDBB8;
+}
+
+.hide {
+	display: 'hide';
 }
 
 th, td {
@@ -50,14 +62,6 @@ p {
 
 .label {
 	font-weight: bold;
-}
-
-.even {
-	background-color: #FFDBB8;
-}
-
-.odd {
-	background-color: #B29981;
 }
 
 #overview>* {

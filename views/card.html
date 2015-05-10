@@ -19,46 +19,27 @@
 		<article>
 			<hgroup id="overview">
 				<h1>{{cardCtrl.card.title}}</h1>
-				<h3>{{cardCtrl.card.displayLevel}}</h3>
+				<h3>{{cardCtrl.displayLevel}}</h3>
 			</hgroup>
 			</br>
 			<table id="technical-details">
-				<tr class="odd">
-					<td class="label">Casting Time</td>
-					<td>1 Action</td>
-					<td class="label">Ritual</td>
-					<td>Yes</td>
+				<tr ng-repeat="row in cardCtrl.table">
+					<td class="label">{{row[0][0]}}</td>
+					<td>{{row[0][1]}}</td>
+					<td class="label">{{row[1][0]}}</td>
+					<td>{{row[1][1]}}</td>
 				</tr>
-				<tr class="even">
-					<td class="label">Duration</td>
-					<td>10 hours</td>
-					<td class="label">Verbal</td>
-					<td>Yes</td>
-				</tr>
-				<tr class="odd">
-					<td class="label">Concentration</td>
-					<td>Yes</td>
-					<td class="label">Somatic</td>
-					<td>Yes</td>
-				</tr>
-				<tr id="components-vs" class="even">
-					<td class="label">Range</td>
-					<td>60 Feet</td>
-					<td class="label">Focus</td>
-					<td>Yes</td>
-				</tr>
-				<tr id="material-details" class="odd">
+				<tr id="material-details" ng-class="cardCtrl.lastRowClass">
 					<td class="label">Material</td>
-					<td colspan="3">A willing brood of cats</td>
+					<td colspan="3">{{cardCtrl.card.material}}</td>
 				</tr>
 			</table>
 			<h3 class="label">Detailed Description:</h3>
 			<p>
-				All of the cats from you willing brood are enlarged to bodyguard size, and mess people up as cats tend to do.
+				{{cardCtrl.card.description}}
 			</p>
-			<hr/>
 			<h3 class="label">Spell Lists:</h3>
-			<p>Cleric, Paladin</p>
+			<p>{{cardCtrl.joinedClassList}}</p>
 		</article>
 		<footer>
 			<div id="similar-links">
