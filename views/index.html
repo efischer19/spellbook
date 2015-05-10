@@ -1,8 +1,28 @@
-<html>
+<!DOCTYPE html>
+<html ng-app="spellbook-index">
+  
   <head>
-    <title>Spellbook, it uses Angular!</title>
+    <title>Spellbook, a D&D 5e reference</title>
+    <link rel="stylesheet" type="text/css" href="stylesheets/common.css">
+    <link rel="stylesheet" type="text/css" href="stylesheets/index.css">
+    <script src="angular.min.js"></script>
+    <script src="index_ctrl.js"></script>
   </head>
-  <body>
-    <h1>Hello, World!</h1>
+  
+  <body ng-controller="IndexCtrl as indexCtrl">
+    <header>
+      <div id="title-header">Droor Spellbook</div>
+    </header>
+    <article>
+      <h1>Welcome to the Spellbook!</h1>
+      <div align="center">
+        <select onchange="this.options[this.selectedIndex].value && (window.location = this.options[this.selectedIndex].value);">
+          <option value="" disabled="disabled" selected="true">Select a spell to see more details...</option>
+          <option value="card.html">Shield of Cats</option>
+          <option value="card.html">Hail of Claws</option>
+        </select>
+        </div>
+    </article>
   </body>
+
 </html>

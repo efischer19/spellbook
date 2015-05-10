@@ -1,0 +1,33 @@
+html {
+	background-image: -webkit-linear-gradient(#FFDBB8, #B29981);
+	background-size: cover;
+	min-height: 100%;
+	max-width: 1200px;
+}
+
+body {
+	font-family: impact, fantasy, arial, sans-serif;
+	color: #2B1600;
+	font-size: 3vh;
+	height: 100%;
+    margin: 0;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+	padding-left: 1vw;
+	padding-right: 2vw;
+}
+
+h1 {
+	font-size: 200%;
+	font-weight: bold;
+}
+
+h3 {
+	font-size: 130%;
+	font-weight: normal;
+	font-style: oblique;
+}
+
+#title-header {
+	text-align: center;
+}

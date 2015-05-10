@@ -1,0 +1,12 @@
+select {
+	width: 50vw;
+	max-width: 750px;
+	background-color: #FFDBB8;
+	height: 10vh;
+	font-size: 130%;
+	font-style: oblique;
+}
+
+h1 {
+	text-align: center;
+}

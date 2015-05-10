@@ -1,42 +1,14 @@
-html {
-	background-image: -webkit-linear-gradient(#FFDBB8, #B29981);
-	background-size: cover;
-	min-height: 100%;
-}
-
-body {
-	font-family: impact, fantasy, arial, sans-serif;
-	color: #2B1600;
-	font-size: 32px;
-	max-width: 1080px;
-	height: 100%;
-    margin: 0;
-    background-repeat: no-repeat;
-    background-attachment: fixed;
-	padding-left: 5px;
-}
-
-h1 {
-	font-size: 200%;
-	font-weight: bold;
-}
-
-h3 {
-	font-size: 130%;
-	font-weight: normal;
-	font-style: oblique;
-}
-
 h1+h3 {
 	float: right;
-	padding-top: 2%;
+	padding-top: 1%;
 }
 
 table {
-	width: 960px;
+	width: 90vw;
+	max-width: 1000px;
 	position: relative;
-	left: 60px;
-	border: 2px solid #2B1600;
+	left: 3vw;
+	border: .5vw solid #2B1600;
 	empty-cells: show;
 }
 
@@ -53,11 +25,11 @@ tr:nth-child(even){
 }
 
 th, td {
-	padding: 5px;
+	padding: 1vw;
 }
 
 p {
-	text-indent: 40px;
+	text-indent: 5vw;
 }
 
 .label {
@@ -66,10 +38,13 @@ p {
 
 #overview>* {
 	display: inline-block;
-	margin-bottom: 0px;
-	margin-top: 30px;
+	margin-bottom: 0vh;
+	margin-top: 2vh;
 }
 
-#title-header {
-	text-align: center;
+footer>* {
+	float: right;
+	font-size: 75%;
+	color: #2B1600;
+	margin-bottom: 2vh;
 }
