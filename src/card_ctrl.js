@@ -1,20 +1,3 @@
-//eventually this will be stored in a backend db, just hard-coding it here so I can get angular working.
-var card_json = {
-	title: 'Shield of Cats',
-	level: 7,
-	school: 'Conjuration',
-	cast_time: '1 Action',
-	ritual: false,
-	duration: '10 hours',
-	concentration: true,
-	somatic: true,
-	range: '60 Feet',
-	m_cost: NaN,
-	material: 'A willing brood of cats',
-	description: 'All of the cats from your willing brood are enlarged to bodyguard size, and mess people up as cats tend to do.',
-	classes: ['Cleric', 'Paladin']
-};
-
 var app = angular.module('spellbook-card', []);
 
 //intended to be called for spells level 1-9
@@ -58,7 +41,7 @@ var lastRowHelper = function(table, card) {
 }
 
 app.controller('CardCtrl', function() {
-  this.card = card_json;
+  this.card = spellbook_list[0];
   this.displayLevel = levelSchool(this.card.level, this.card.school);
   this.table = tableData(this.card);
   this.lastRowClass = lastRowHelper(this.table, this.card);

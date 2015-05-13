@@ -5,7 +5,8 @@
     <title>Spellbook, a D&D 5e reference</title>
     <link rel="stylesheet" type="text/css" href="stylesheets/common.css">
     <link rel="stylesheet" type="text/css" href="stylesheets/index.css">
-    <script src="angular.min.js"></script>
+    <script src="angular.js"></script>
+    <script src="card_list.js"></script>
     <script src="index_ctrl.js"></script>
   </head>
   
@@ -16,10 +17,8 @@
     <article>
       <h1>Welcome to the Spellbook!</h1>
       <div align="center">
-        <select onchange="this.options[this.selectedIndex].value && (window.location = this.options[this.selectedIndex].value);">
-          <option value="" disabled="disabled" selected="true">Select a spell</option>
-          <option value="card.html">Shield of Cats</option>
-          <option value="card.html">Hail of Claws</option>
+        <select ng-change="go(chosen_spell)" ng-options="spell.title for spell in spellbook_list" ng-model="chosen_spell">
+          <option value="">Select a spell</option>          
         </select>
         </div>
     </article>
