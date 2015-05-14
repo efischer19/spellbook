@@ -46,3 +46,9 @@ var spellbook_list = [{
 		classes: ['Druid', 'Ranger', 'Wizard']
 	}
 ];
+
+var spell_list_extern = {};
+for (var i = 0; i < spellbook_list.length; i++)
+{
+	spell_list_extern[spellbook_list[i].url] = spellbook_list[i];
+}

@@ -1,4 +1,6 @@
-var app = angular.module('spellbook-card', []);
+var app = angular.module('spellbook-card', []).config(function($locationProvider) {
+	$locationProvider.html5Mode({enabled: true, requireBase: false});
+});
 
 //intended to be called for spells level 1-9
 var ordinal = function(digit) {
@@ -40,8 +42,8 @@ var lastRowHelper = function(table, card) {
 	return table.length %2 == 0 ? 'odd' : 'even';
 }
 
-app.controller('CardCtrl', function() {
-  this.card = spellbook_list[0];
+app.controller('CardCtrl', function($location) {
+  this.card = spell_list_extern[$location.search()['spell']];
   this.displayLevel = levelSchool(this.card.level, this.card.school);
   this.table = tableData(this.card);
   this.lastRowClass = lastRowHelper(this.table, this.card);
